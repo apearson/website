@@ -14,7 +14,10 @@ body {
   position: absolute;
   top: 0px; left: 0px; right: 0px; bottom: 0px;
 
-  width: 820px;
+  width: 940px;
+
+  /*Padding*/
+  padding: 50px;
 }
 
 /*Profile Card*/
@@ -24,16 +27,18 @@ body {
 
   /*Min Height and Width*/
   height: 300px;
-  width: 200px;
-
-  /*Background of card*/
-  background-color: #f0f0f0;
+  width: 225px;
 
   /*Color of Text*/
   color: black;
 
   /*Rounding*/
-  border-radius: 20px;
+  border-radius: 6px;
+}
+
+/*Profile Photo*/
+#profilePhoto {
+  border-radius: 6px;
 }
 
 /*Main Content Card*/
@@ -46,11 +51,14 @@ body {
   width: 600px;
 
   /*Background of card*/
-  background-color: #f0f0f0;
+  background-color: #fff;
 
   /*Color of Text*/
   color: black;
 
   /*Rounding*/
-  border-radius: 20px;
+  border-radius: 6px;
+
+  /*Padding Content*/
+  padding: 8px;
 }
