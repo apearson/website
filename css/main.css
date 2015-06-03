@@ -1,0 +1,56 @@
+body {
+  /*Text Directly on Background*/
+  color: white;
+  
+  /*Background*/
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+}
+
+/*Content Holder*/
+#content {
+  /* Absolute Centering */
+  margin: auto;
+  position: absolute;
+  top: 0px; left: 0px; right: 0px; bottom: 0px;
+
+  width: 820px;
+}
+
+/*Profile Card*/
+#profileCard {
+  /*Positioning Left*/
+  float:left;
+
+  /*Min Height and Width*/
+  height: 300px;
+  width: 200px;
+
+  /*Background of card*/
+  background-color: #f0f0f0;
+
+  /*Color of Text*/
+  color: black;
+
+  /*Rounding*/
+  border-radius: 20px;
+}
+
+/*Main Content Card*/
+#contentCard {
+  /*Positioning Left*/
+  float:right;
+
+  /*Min Height and Width*/
+  height: 300px;
+  width: 600px;
+
+  /*Background of card*/
+  background-color: #f0f0f0;
+
+  /*Color of Text*/
+  color: black;
+
+  /*Rounding*/
+  border-radius: 20px;
+}
