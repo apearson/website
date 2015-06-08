@@ -5,6 +5,7 @@ body {
   /*Background*/
   background-image: url(../images/background.png);
   background-size: cover;
+  background-color: black;
 }
 
 /*Content Holder*/
