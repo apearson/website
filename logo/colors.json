@@ -1,0 +1,9 @@
+{
+  "brand":{
+    primary: "#1A92AD"
+  },
+  "logo":{
+    background: "#1A92AD",
+    shadow: "#1A8AA3"
+  }
+}
