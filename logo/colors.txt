@@ -1,0 +1,2 @@
+Logo Background:  #1A92AD
+Logo Shadow:      #1A8AA3
