@@ -1,35 +1,22 @@
 body {
   /*Text Directly on Background*/
   color: white;
-  
+
   /*Background*/
   background-image: url(../images/background.png);
   background-size: cover;
   background-color: black;
 }
 
-/*Content Holder*/
-#content {
-  /* Absolute Centering */
-  margin: auto;
-  position: absolute;
-  top: 0px; left: 0px; right: 0px; bottom: 0px;
-
-  width: 940px;
-
-  /*Padding*/
-  padding: 50px;
+/* Top Padding on Large Devices */
+@media (min-width: 48em) {
+  .container {
+      padding-top: 50px;
+    }
 }
 
 /*Profile Card*/
 #profileCard {
-  /*Positioning Left*/
-  float:left;
-
-  /*Min Height and Width*/
-  height: 300px;
-  width: 225px;
-
   /*Color of Text*/
   color: black;
 
@@ -44,13 +31,6 @@ body {
 
 /*Main Content Card*/
 #contentCard {
-  /*Positioning Left*/
-  float:right;
-
-  /*Min Height and Width*/
-  height: 300px;
-  width: 600px;
-
   /*Background of card*/
   background-color: #fff;
 

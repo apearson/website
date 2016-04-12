@@ -24,7 +24,7 @@
   <link rel="icon" type="image/png" sizes="96x96"  href="images/favicons/android/icon-96x96.png">
   <link rel="icon" type="image/png" sizes="144x144"  href="images/favicons/android/icon-144x144.png">
   <link rel="icon" type="image/png" sizes="192x192"  href="images/favicons/android/icon-192x192.png">
-  
+
   <!-- Manifest File -->
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#010101">
@@ -33,47 +33,46 @@
   <title>John Andrew Tyler Pearson</title>
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
-  
+  <link rel="stylesheet" href="css/libs/bootstrap.min.css">
+
   <!-- Styles -->
   <link rel="stylesheet" href="css/logos.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-  
-  <div id="content">
-    <!-- Profile Card -->
-    <div id="profileCard">
+<body class="container">
+  <!-- Main Content Row -->
+  <div class="row">
+    <div id="profileCard" class="col-md-offset-2 col-md-5">
       <div class="thumbnail">
-        <img id="profilePhoto" src="images/profilePhoto.jpg">
+        <img id="profilePhoto" src="images/profile-photo.png">
         <div class="caption">
           <h3 id="fullName">John Andrew Tyler Pearson</h3>
-          <p id="bio">Student and Software Developer</p>
-  
-          <h5>School: 
+          <p id="bio">Student and <br> Software Developer</p>
+
+          <h5>School:
             <a href="http://uab.edu" target="_blank">University of Alabama at Birmingham </a>
           </h5>
-          <h5>Work: 
+          <h5>Work:
             <a href="http://digi-answers.com" target="_blank">Digital Answers LLC </a>
           </h5>
 
           <div class="container-fluid socialMediaBar">
-            <div class="col-md-3 socialIcon">
+            <div class="col-xs-4 col-md-6 socialIcon">
               <a href="mailto:andrew@andrewpe.com">
                 <img id="emailMark" class="serviceMark" src="images/email-mark.png">
               </a>
             </div>
-            <div class="col-md-3 socialIcon">
+            <div class="col-xs-4 col-md-6 socialIcon">
               <a href="https://github.com/andrewpe" target="_blank">
                 <img id="githubMark" class="serviceMark" src="images/github-mark.png">
               </a>
             </div>
-            <div class="col-md-3 socialIcon">
+            <div class="col-xs-4 col-md-6 socialIcon">
               <a href="https://twitter.com/andrewpe94" target="_blank">
                 <img id="twitterMark" class="serviceMark" src="images/twitter-mark.png">
               </a>
             </div>
-            <div class="col-md-3 socialIcon">
+            <div class="col-xs-4 col-md-6 socialIcon">
               <a href="https://www.linkedin.com/profile/view?id=160791948" target="_blank">
                 <img id="linkedinMark" class="serviceMark" src="images/linkedin-mark.png">
               </a>
@@ -83,25 +82,47 @@
       </div>
     </div>
 
-    <!-- Main Content Card -->
-    <div id="contentCard">
+    <div id="contentCard" class="col-md-14">
       <div class="page-header">
         <h3>Preferred Languages <small>The ones I know and can utilize</small></h3>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a id="frontend-nav" class="nav-link active" data-toggle="tab"role="tab">
+              Frontend
+            </a>
+          </li>
+          <li class="nav-item">
+            <a id="backend-nav" class="nav-link" data-toggle="tab" role="tab">
+              Backend
+            </a>
+          </li>
+        </ul>
+        <div>
+
+          This is a work in progress
+        </div>
       </div>
     </div>
   </div>
-  
+
+
+  <!-- Copyright Row -->
+  <div class="row">
+    <footer class="footer col-md-offset-2">
+      <p>Andrew Pearson &copy; 2016</p>
+    </footer>
+  </div>
+
   <!-- Scripts Container -->
-  <div id="scripts">
     <!-- jQuery -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/libs/jquery-2.2.3.min.js"></script>
     <!-- Bootstrap JS -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/libs/bootstrap.min.js"></script>
 
     <!-- Scripts -->
     <script src="js/profile.js"></script>
     <script src="js/main.js"></script>
-  </div
 
 </body>
 </html>
