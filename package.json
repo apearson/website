@@ -1,0 +1,22 @@
+{
+  "name": "apearson.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "live-server ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apearson/apearson.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apearson/apearson.github.io/issues"
+  },
+  "homepage": "https://github.com/apearson/apearson.github.io#readme",
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  }
+}
