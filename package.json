@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "live-server ."
+    "test": "live-server .",
+    "build": "webpack --progress",
+    "test:webpack": "webpack-dev-server --progress --open --color"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,15 @@
   },
   "homepage": "https://github.com/apearson/apearson.github.io#readme",
   "devDependencies": {
-    "live-server": "^1.2.0"
+    "@types/chart.js": "^2.7.6",
+    "live-server": "^1.2.0",
+    "ts-loader": "^3.3.1",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "chart.js": "^2.7.1"
   }
 }
