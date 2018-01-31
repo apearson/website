@@ -9,18 +9,21 @@ h4{
 /* Body */
 body{
 	/* Background */
-	background-color: #0f0f0f;
-	background: url(/images/pattern.svg);
-	background-size: auto;
+	background: #844767;
+	background: radial-gradient(at top, #844767 0%, #11274A 75%);
+
+	/* background-color: #0f0f0f;
+	background: url(/images/W_2013_200.jpg);
+	background-size: cover;
 	background-attachment: fixed;
-	/* color: white; */
+	color: white; */
 
 	/* Internal spacing */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-top: 100px;
-	margin-bottom: 100px;
+	padding-top: 50px;
+	margin-bottom: 50px;
 
 	/* Font */
 	font-family: 'Open Sans', sans-serif;
