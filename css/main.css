@@ -9,14 +9,11 @@ h4{
 /* Body */
 body{
 	/* Background */
-	background: #844767;
-	background: radial-gradient(at top, #844767 0%, #11274A 75%);
+	background: #11274A;
+	background: radial-gradient(at top, #844767 0%, #11274A 75%) fixed;
 
-	/* background-color: #0f0f0f;
-	background: url(/images/W_2013_200.jpg);
-	background-size: cover;
-	background-attachment: fixed;
-	color: white; */
+	/* Text Color */
+	color: #ffffff;
 
 	/* Internal spacing */
 	display: flex;
