@@ -26,10 +26,17 @@ body{
 	/* Font */
 	font-family: 'Open Sans', sans-serif;
 }
+
 .container{
 	display: flex;
+	flex-direction: row;
 	width: 100vw;
 	max-width: 1200px;
+}
+@media screen and (max-width: 800px){
+	.container{
+		flex-wrap: wrap;
+	}
 }
 
 /* Paper */
@@ -59,12 +66,14 @@ body{
 /* Components */
 .profile{
 	/* Dimensions */
-	width: 230px;
+	flex-grow: 1;
+	/* max-width: 230px; */
 	max-height: 430px;
 
 	/* Margins */
 	margin-left: 5px;
 	margin-right: 5px;
+	margin-bottom: 5px;
 
 	/* Internal Padding */
 	padding-top: 5px;
@@ -78,6 +87,7 @@ body{
 }
 /* Profile Photo */
 .profile #photo{
+	align-self: center;
 	width: 230px;
 	border-radius: 5px;
 }
@@ -137,7 +147,7 @@ body{
 /* Content */
 .content{
 	/* Dimensions */
-	flex-grow: 1;
+	flex-grow: 4;
 
 	/* Margins */
 	margin-left: 5px;
