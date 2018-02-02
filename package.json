@@ -6,7 +6,7 @@
   "scripts": {
     "test": "live-server .",
     "build": "webpack --progress",
-    "test:webpack": "webpack-dev-server --progress --open --color"
+    "test:webpack": "webpack-dev-server --progress --open --color --host 0.0.0.0 --watch-content-base"
   },
   "repository": {
     "type": "git",
