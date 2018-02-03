@@ -17303,7 +17303,9 @@ var App = /** @class */ (function () {
             var res, data;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, fetch('https://home.apearson.io/api/utility/monthly', { method: 'GET' })];
+                    case 0: return [4 /*yield*/, fetch('https://home.apearson.io/api/utility/monthly?limit=12', {
+                            method: 'GET'
+                        })];
                     case 1:
                         res = _a.sent();
                         return [4 /*yield*/, res.json()];
@@ -17336,6 +17338,7 @@ var App = /** @class */ (function () {
                                         data: chartData,
                                         pointRadius: 7,
                                         pointHitRadius: 15,
+                                        pointHoverRadius: 5,
                                     }
                                 ]
                             },

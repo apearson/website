@@ -1,5 +1,6 @@
 /* Libraries */
 import {Chart, ChartData} from 'chart.js';
+import * as qs from 'qs';
 
 /* Interfaces */
 interface MonthlyData{
@@ -17,7 +18,10 @@ class App{
 	}
 
 	async grabMonthlyData(): Promise<MonthlyData[]>{
-		const res = await fetch('https://home.apearson.io/api/utility/monthly', {method: 'GET'});
+		const res = await fetch('https://home.apearson.io/api/utility/monthly?limit=12', {
+			method: 'GET'
+
+		});
 		const data: MonthlyData[] = await res.json();
 
 		return data;
@@ -42,6 +46,7 @@ class App{
 						data: chartData,
 						pointRadius: 7,
 						pointHitRadius: 15,
+						pointHoverRadius: 5,
 					}
 				]
 			},
