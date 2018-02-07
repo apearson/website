@@ -1,30 +1,27 @@
 {
-  "name": "apearson.github.io",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "webpack",
-    "test": "webpack-dev-server --progress --color"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/apearson/apearson.github.io.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/apearson/apearson.github.io/issues"
-  },
-  "homepage": "https://github.com/apearson/apearson.github.io#readme",
-  "devDependencies": {
-    "@types/chart.js": "^2.7.6",
-    "ts-loader": "^3.3.1",
-    "typescript": "^2.6.2",
-    "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.11.1"
-  },
-  "dependencies": {
-    "chart.js": "^2.7.1"
-  }
+	"name": "aPearson-website",
+	"version": "1.0.0",
+	"description": "aPearson Personal Website",
+	"scripts": {
+		"build": "webpack",
+		"test": "webpack-dev-server --progress --color"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/apearson/website.git"
+	},
+	"bugs": {
+		"url": "https://github.com/apearson/website/issues"
+	},
+	"homepage": "https://github.com/apearson/website#readme",
+	"devDependencies": {
+		"@types/chart.js": "^2.7.6",
+		"ts-loader": "^3.3.1",
+		"typescript": "^2.6.2",
+		"webpack": "^3.10.0",
+		"webpack-dev-server": "^2.11.1"
+	},
+	"dependencies": {
+		"chart.js": "^2.7.1"
+	}
 }
