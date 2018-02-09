@@ -3,8 +3,15 @@ const path = require('path');
 
 /* Webpack config */
 module.exports = {
+	/* Entry */
 	entry: './src/main.ts',
 
+	/* File resolution */
+	resolve: {
+		extensions: [ '.tsx', '.ts', '.js' ]
+	},
+
+	/* Loaders */
 	module: {
 		rules: [
 			{
@@ -15,21 +22,10 @@ module.exports = {
 		]
 	},
 
-	resolve: {
-		extensions: [ '.tsx', '.ts', '.js' ]
-	},
-
+	/* Output */
 	output: {
 		filename: 'bundle.js',
 		path: path.resolve('public', 'dist'),
 		publicPath: '/dist/'
-	},
-
-	/* Development */
-	devServer: {
-		contentBase: path.resolve('public'),
-		watchContentBase: true,
-		host: '0.0.0.0',
-		open: true,
 	},
 };
