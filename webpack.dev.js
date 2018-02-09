@@ -1,11 +1,12 @@
 /* Libraries */
 const path = require('path');
 const merge = require('webpack-merge');
+
+/* Base Config */
 const config = require('./webpack.config.js');
 
 /* Extending config for dev */
 module.exports = merge(config, {
-
 	/* Source Maps */
 	devtool: 'cheap-source-map',
 
