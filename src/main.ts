@@ -1,6 +1,5 @@
 /* Libraries */
-import {Chart, ChartData} from 'chart.js';
-import * as qs from 'qs';
+import {Chart, ChartPoint} from 'chart.js';
 
 /* Interfaces */
 interface MonthlyData{
@@ -30,7 +29,7 @@ class App{
 	async initChart(){
 		const data = await this.grabMonthlyData();
 
-		const chartData = data.map((month)=> ({x: new Date(month.date), y: month.kWh}));
+		const chartData: ChartPoint[] = data.map((month)=> ({x: new Date(month.date), y: month.kWh}));
 
 		const chartCanvas = document.getElementsByTagName('canvas')[0];
 		const context = chartCanvas.getContext('2d');
