@@ -7,6 +7,9 @@ const config = require('./webpack.config.js');
 
 /* Extending config for dev */
 module.exports = merge(config, {
+	/* Changing mode to production */
+	mode: 'development',
+
 	/* Source Maps */
 	devtool: 'cheap-source-map',
 

@@ -10,14 +10,14 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 /* Extending config for prod */
 module.exports = merge(config, {
+	/* Changing mode to production */
+	mode: 'production',
+
 	/* Source Maps */
 	devtool: 'source-map',
 
 	/* Plugins */
 	plugins: [
-		new webpack.DefinePlugin({
-			'process.env.NODE_ENV': JSON.stringify('production')
-		}),
 		new UglifyJsPlugin({sourceMap: true})
 	],
 });
