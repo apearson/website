@@ -2,6 +2,10 @@
 a{
 	text-decoration: none;
 }
+h2{
+	font-size: 120%;
+	font-weight: normal;
+}
 h4{
 	margin-bottom: 5px;
 	margin-top: 5px;
@@ -64,7 +68,7 @@ body{
 }
 
 /* Components */
-.profile{
+nav{
 	/* Dimensions */
 	flex-grow: 1;
 	/* max-width: 230px; */
@@ -86,58 +90,52 @@ body{
 	flex-direction: column;
 }
 /* Profile Photo */
-.profile #photo{
+nav #photo{
 	align-self: center;
 	width: 230px;
 	border-radius: 5px;
 }
 
 /* Profile Name */
-.profile #name{
-	font-size: 18px;
+nav #name{
+	font-size: 110%;
+	font-weight: normal;
 	margin-bottom: 5px;
 	text-align: center;
 }
 
 /* Description */
-.profile #description{
+nav #description{
 	margin-bottom: 20px;
 	text-align: center;
 }
 
-/* Skills */
-.profile #skills{
-	width: 100%;
-	margin-bottom: 20px;
-	font-size: 14px;
-}
-
 /* Work */
-.profile #work{
+nav #work{
 	display: flex;
 	width: 100%;
 	margin-bottom: 5px;
-	font-size: 14px;
+	font-size: 90%;
 }
-.profile #work .title{
+nav #work .title{
 	margin-right: 10px;
 	width: 50px;
 }
 
 /* School */
-.profile #school{
+nav #school{
 	display: flex;
 	width: 100%;
 	margin-bottom: 20px;
-	font-size: 14px;
+	font-size: 90%;
 }
-.profile #school .title{
+nav #school .title{
 	margin-right: 10px;
 	width: 50px;
 }
 
 /* Links */
-.profile #links{
+nav #links{
 	display: flex;
 	flex-grow: 1;
 	justify-content: space-evenly;
@@ -145,7 +143,7 @@ body{
 }
 
 /* Content */
-.content{
+main{
 	/* Dimensions */
 	flex-grow: 4;
 
@@ -157,7 +155,7 @@ body{
 	padding: 15px;
 }
 
-.content .project{
+main .project{
 	margin-bottom: 15px;
 }
 
