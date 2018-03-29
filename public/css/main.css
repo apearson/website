@@ -1,4 +1,4 @@
-/* Correction */
+/* Corrections */
 a{
 	text-decoration: none;
 }
@@ -10,6 +10,7 @@ h4{
 	margin-bottom: 5px;
 	margin-top: 5px;
 }
+
 /* Body */
 body{
 	/* Background */
@@ -29,34 +30,16 @@ body{
 	text-align: center;
 }
 
+/* Layout containers */
 .container{
 	max-width: 1200px;
 	margin: auto;
 	text-align: initial;
 }
-
-/* Paper */
-.paper {
-	background-color: #ffffff;
-	color: black;
-	border-radius: 5px;
-	transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
-	cursor: default;
-}
-.paper-1 {
-	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-.paper-2 {
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-}
-.paper-3 {
-	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
-.paper-4 {
-	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
-.paper-5 {
-	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+.alert-container{
+	margin-top: 20vh;
+	max-width: 600px;
+	width: 100%;
 }
 
 /* Components */
@@ -142,10 +125,46 @@ main .project{
 	margin-bottom: 15px;
 }
 
+.alert-container header{
+	color: #ffffff;
+	text-align: center;
+	background: repeating-linear-gradient(135deg, #ebd007, #ebd007 30px, #555 30px, #555 60px);
+	margin-bottom: 10px;
+	font-size: 800%;
+}
+.alert-container main p{
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+
 /* Footer and Copyright */
 footer{
 	margin-top: 10px;
 	color: white;
+}
+
+/* Paper */
+.paper {
+	background-color: #ffffff;
+	color: black;
+	border-radius: 5px;
+	transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
+	cursor: default;
+}
+.paper-1 {
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.paper-2 {
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.paper-3 {
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.paper-4 {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.paper-5 {
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
 /* Responsive Design (Desktop) */
