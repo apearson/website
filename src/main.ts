@@ -50,7 +50,6 @@ class App{
 				]
 			},
 			options: {
-				responsive: true,
 				scales:{
 					xAxes:[
 						{

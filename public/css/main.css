@@ -21,26 +21,18 @@ body{
 	color: #ffffff;
 
 	/* Internal spacing */
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding-top: 50px;
-	margin-bottom: 50px;
+	margin: 20px;
+	margin-top: 50px;
 
 	/* Font */
 	font-family: 'Open Sans', sans-serif;
+	text-align: center;
 }
 
 .container{
-	display: flex;
-	flex-direction: row;
-	width: 100vw;
 	max-width: 1200px;
-}
-@media screen and (max-width: 800px){
-	.container{
-		flex-wrap: wrap;
-	}
+	margin: auto;
+	text-align: initial;
 }
 
 /* Paper */
@@ -71,19 +63,10 @@ body{
 nav{
 	/* Dimensions */
 	flex-grow: 1;
-	/* max-width: 230px; */
 	max-height: 430px;
 
-	/* Margins */
-	margin-left: 5px;
-	margin-right: 5px;
-	margin-bottom: 5px;
-
 	/* Internal Padding */
-	padding-top: 5px;
-	padding-bottom: 5px;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding: 5px 15px 5px 15px;
 
 	/* Internal Spacing */
 	display: flex;
@@ -146,10 +129,10 @@ nav #links{
 main{
 	/* Dimensions */
 	flex-grow: 4;
+	flex-shrink: 1;
 
-	/* Margins */
-	margin-left: 5px;
-	margin-right: 5px;
+	/* Flexbox fix */
+	min-width: 0;
 
 	/* Internal Padding */
 	padding: 15px;
@@ -163,4 +146,22 @@ main .project{
 footer{
 	margin-top: 10px;
 	color: white;
+}
+
+/* Responsive Design (Desktop) */
+@media screen and (min-width: 900px) {
+	.container{
+		display: flex;
+	}
+	nav{
+		width: 250px;
+		margin-right: 5px;
+	}
+}
+
+/* Responsive Design (Mobile) */
+@media screen and (max-width: 899px){
+	nav{
+		margin-bottom: 5px;
+	}
 }
