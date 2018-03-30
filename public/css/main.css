@@ -30,16 +30,37 @@ body{
 	text-align: center;
 }
 
+body.alert{
+	/* Main body override */
+	margin-top: 0px;
+
+	/* Setting body to full page height */
+	height: 100vh;
+
+	/* Setting up vertical and horizontal centering */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
 /* Layout containers */
 .container{
 	max-width: 1200px;
+
+	/* Centering without flexbox */
 	margin: auto;
+
 	text-align: initial;
 }
-.alert-container{
-	margin-top: 20vh;
+.container.alert{
 	max-width: 600px;
+
+	/* Always attempting to fill to max width */
 	width: 100%;
+
+	margin: initial;
+	text-align: center;
 }
 
 /* Components */
@@ -125,14 +146,14 @@ main .project{
 	margin-bottom: 15px;
 }
 
-.alert-container header{
+.container.alert header{
 	color: #ffffff;
 	text-align: center;
 	background: repeating-linear-gradient(135deg, #ebd007, #ebd007 30px, #555 30px, #555 60px);
 	margin-bottom: 10px;
 	font-size: 800%;
 }
-.alert-container main p{
+.container.alert main p{
 	margin-top: 0px;
 	margin-bottom: 5px;
 }
@@ -171,6 +192,9 @@ footer{
 @media screen and (min-width: 900px) {
 	.container{
 		display: flex;
+	}
+	.container.alert{
+		display: initial;
 	}
 	nav{
 		width: 250px;
