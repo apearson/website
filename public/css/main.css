@@ -53,7 +53,7 @@ body.alert{
 
 	text-align: initial;
 }
-.container.alert{
+.alert .container{
 	max-width: 600px;
 
 	/* Always attempting to fill to max width */
@@ -146,14 +146,14 @@ main .project{
 	margin-bottom: 15px;
 }
 
-.container.alert header{
+.alert .container header{
 	color: #ffffff;
 	text-align: center;
 	background: repeating-linear-gradient(135deg, #ebd007, #ebd007 30px, #555 30px, #555 60px);
 	margin-bottom: 10px;
 	font-size: 800%;
 }
-.container.alert main p{
+.alert .container main p{
 	margin-top: 0px;
 	margin-bottom: 5px;
 }
@@ -193,7 +193,7 @@ footer{
 	.container{
 		display: flex;
 	}
-	.container.alert{
+	.alert .container{
 		display: initial;
 	}
 	nav{
