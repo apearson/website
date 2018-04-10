@@ -10,20 +10,32 @@ h4{
 	margin-bottom: 5px;
 	margin-top: 5px;
 }
+p{
+	margin: 0px;
+}
 
 /* Body */
 body{
 	/* Background */
 	background: #11274A;
-	background: radial-gradient(at top, #844767 0%, #11274A 75%) fixed;
+	background: radial-gradient(at top, #844767 0%, #11274A 75%);
 	background-attachment: fixed;
 
 	/* Text Color */
 	color: #ffffff;
 
-	/* Internal spacing */
-	margin: 20px;
-	margin-top: 50px;
+	/* External spacing */
+	max-width: 1200px;
+	margin: 30px auto;
+	padding: 20px;
+
+	/* Layout */
+	display: grid;
+	grid-row-gap: 10px;
+	grid-template-areas:
+			"nav"
+			"main"
+			"footer";
 
 	/* Font */
 	font-family: 'Open Sans', sans-serif;
@@ -31,135 +43,104 @@ body{
 }
 
 body.alert{
-	/* Main body override */
-	margin-top: 0px;
-
-	/* Setting body to full page height */
-	height: 100vh;
-
-	/* Setting up vertical and horizontal centering */
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-
-/* Layout containers */
-.container{
-	max-width: 1200px;
-
-	/* Centering without flexbox */
-	margin: auto;
-
-	text-align: initial;
-}
-.alert .container{
-	max-width: 600px;
-
-	/* Always attempting to fill to max width */
-	width: 100%;
-
-	margin: initial;
-	text-align: center;
+	grid-template-areas:
+	"header"
+	"main"
+	"footer";
 }
 
 /* Components */
-nav{
-	/* Dimensions */
-	flex-grow: 1;
-	max-height: 430px;
-
-	/* Internal Padding */
-	padding: 5px 15px 5px 15px;
-
-	/* Internal Spacing */
-	display: flex;
-	flex-direction: column;
+header{
+	grid-area: header;
 }
+nav{
+	/* Grid Metadata */
+	grid-area: nav;
+
+	/* Layout */
+	padding: 5px 15px;
+}
+
 /* Profile Photo */
-nav #photo{
-	align-self: center;
+nav > #photo{
 	width: 230px;
 	border-radius: 5px;
 }
 
 /* Profile Name */
-nav #name{
+nav > #name{
 	font-size: 110%;
 	font-weight: normal;
 	margin-bottom: 5px;
-	text-align: center;
 }
 
 /* Description */
-nav #description{
+nav > #description{
 	margin-bottom: 20px;
-	text-align: center;
 }
 
-/* Work */
-nav #work{
-	display: flex;
-	width: 100%;
-	margin-bottom: 5px;
-	font-size: 90%;
-}
-nav #work .title{
-	margin-right: 10px;
-	width: 50px;
-}
-
-/* School */
-nav #school{
-	display: flex;
-	width: 100%;
+/* Metadata */
+nav > #metadata{
+	/* Layout */
+	display: grid;
+	margin: 0 auto;
+	width: fit-content;
 	margin-bottom: 20px;
+
+	/* Grid internal layout */
+	grid-row-gap: 5px;
+	grid-column-gap: 5px;
+
+	/* Grid auto setting */
+	grid-template-columns: repeat(2, auto);
+
+	/* Text style */
+	text-align: initial;
 	font-size: 90%;
-}
-nav #school .title{
-	margin-right: 10px;
-	width: 50px;
 }
 
 /* Links */
-nav #links{
+nav > #links{
+	/* Layout */
 	display: flex;
-	flex-grow: 1;
+
+	/* Internal layout */
 	justify-content: space-evenly;
 	align-items: flex-end;
 }
 
 /* Content */
 main{
-	/* Dimensions */
-	flex-grow: 4;
-	flex-shrink: 1;
+	/* Grid Metadata */
+	grid-area: main;
 
-	/* Flexbox fix */
-	min-width: 0;
-
-	/* Internal Padding */
+	/* Layout */
 	padding: 15px;
-}
+	text-align: initial;
 
+	/* Grid shink fix */
+	min-width: 0;
+}
 main .project{
 	margin-bottom: 15px;
 }
 
-.alert .container header{
+body.alert > header{
 	color: #ffffff;
-	text-align: center;
 	background: repeating-linear-gradient(135deg, #ebd007, #ebd007 30px, #555 30px, #555 60px);
 	margin-bottom: 10px;
 	font-size: 800%;
 }
-.alert .container main p{
-	margin-top: 0px;
-	margin-bottom: 5px;
+body.alert > main{
+	text-align: center;
 }
 
 /* Footer and Copyright */
 footer{
+	/* Grid Metadata */
+	grid-area: footer;
+
+	/* Layout */
 	margin-top: 10px;
 	color: white;
 }
@@ -190,21 +171,21 @@ footer{
 
 /* Responsive Design (Desktop) */
 @media screen and (min-width: 900px) {
-	.container{
-		display: flex;
+	body{
+		grid-template-columns: 2fr 7fr;
+		grid-column-gap: 10px;
+		grid-template-areas:
+			"nav main"
+			".   main"
+			"footer footer"
 	}
-	.alert .container{
-		display: initial;
-	}
-	nav{
-		width: 250px;
-		margin-right: 5px;
-	}
-}
-
-/* Responsive Design (Mobile) */
-@media screen and (max-width: 899px){
-	nav{
-		margin-bottom: 5px;
+	body.alert{
+		grid-template-columns: 1fr 500px 1fr;
+		grid-template-rows: 1fr 2fr 2fr auto;
+		grid-template-areas:
+		". .      ."
+		". header    ."
+		". main   ."
+		". footer .";
 	}
 }
