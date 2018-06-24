@@ -4,7 +4,7 @@
 	"description": "aPearson Personal Website",
 	"scripts": {
 		"build": "webpack --config webpack.prod.js",
-		"test": "webpack-dev-server --config webpack.dev.js --progress --color"
+		"debug": "webpack-dev-server --config webpack.dev.js --progress --color"
 	},
 	"repository": {
 		"type": "git",

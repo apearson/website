@@ -58,6 +58,7 @@ nav{
 	grid-area: nav;
 
 	/* Layout */
+	position: initial;
 	padding: 5px 15px;
 }
 
@@ -187,5 +188,17 @@ footer{
 		". header    ."
 		". main   ."
 		". footer .";
+	}
+
+	nav{
+		/* Max Width */
+		max-width: 245px;
+
+		/* Sticky Positioning */
+		position: -webkit-sticky;
+		position: sticky;
+
+		/* Position (margin + padding) */
+		top: 50px;
 	}
 }
