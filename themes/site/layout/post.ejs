@@ -1,0 +1,15 @@
+<!-- Post -->
+<article>
+	<!-- Post Header -->
+	<header>
+		<h2><%= page.title %></h2>
+
+		<time datetime="<%= page.date.format("YYYY-MM-DD") %>" pubdate="pubdate">
+			<%= page.date.format("dddd, MMMM Do YYYY") %>
+		</time>
+	</header>
+	<hr>
+
+	<!-- Post Content -->
+	<%- page.content %>
+</article>

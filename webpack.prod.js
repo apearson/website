@@ -16,6 +16,9 @@ module.exports = merge(config, {
 	/* Source Maps */
 	devtool: 'source-map',
 
+	/* Turning off warnings */
+	performance: { hints: false },
+
 	/* Plugins */
 	plugins: [
 		new UglifyJsPlugin({sourceMap: true})

@@ -1,0 +1,29 @@
+<!-- Archive Header -->
+<header>
+	<h2>Update & Project Archives</h2>
+</header>
+<hr>
+
+<!-- Posts -->
+<section>
+	<h3> All Posts </h3>
+	<% for(let i = site.posts.data.length - 1; i >= 0; i--){%>
+		<li>
+			<a href="<%= url_for(site.posts.data[i].path) %>">
+				<%- site.posts.data[i].title %>
+			</a>
+		</li>
+	<% } %>
+</section>
+
+<!-- Pages -->
+<section>
+	<h3> All Pages </h3>
+	<% for(let i = site.pages.data.length - 1; i >= 0; i--){%>
+		<li>
+			<a href="<%= url_for(site.pages.data[i].path) %>">
+				<%- site.pages.data[i].title %>
+			</a>
+		</li>
+	<% } %>
+</section>

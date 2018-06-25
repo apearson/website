@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- File encoding -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Manifest File -->
+	<link rel="manifest" href="manifest.json">
+	<meta name="theme-color" content="#11274A">
+	<meta name="application-name" content="aPearson">
+
+	<!-- Site Description -->
+	<meta name="description" content="I am a Software Developer specialized in web technologies and computer networks. In my free time, I work on projects ranging from home automation to core internet technologies." />
+
+	<!-- Apple Favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-title" content="aPearson">
+	<link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+
+	<!-- Favicons -->
+	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<!-- Microsoft Favicons -->
+	<meta name="msapplication-TileColor" content="#11274a">
+	<meta name="msapplication-config" content="/images/favicons/browserconfig.xml">
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+	<!-- Custom Styles -->
+	<link rel="stylesheet" href="/css/main.css">
+
+	<!-- Title -->
+	<title>
+		<% if(page.title){ %>
+			aPearson | <%- page.title %>
+		<% } else { %>
+			John Andrew Tyler Pearson
+		<% } %>
+	</title>
+</head>
+<body>
+	<!-- Profile Card -->
+	<nav class="paper paper-1">
+		<img id="photo" src="/images/profile-pic.png" alt="Photo of John Andrew Tyler Pearson" title="Photo of John Andrew Tyler Pearson">
+
+		<h1 id="name"><a href="/">John Andrew Tyler Pearson</a></h1>
+
+		<p id="description">Software Engineer</p>
+
+		<div id="metadata">
+			<div>Work:</div> <a href="http://integratedlegacy.com/" target="_blank">Integrated Legacy Solutions</a>
+
+			<div>School:</div> <a href="https://uab.edu/" target="_blank">University of Alabama at Birmingham</a>
+		</div>
+
+		<div id="links">
+			<a href="http://www.sarakhoury.com" target="_blank">
+				<img width="32" width="32" src="/images/icons/girlfriend.svg" alt="Girlfriend's Website" title="Girlfriend's Website"/>
+			</a>
+			<a href="https://github.com/apearson" target="_blank">
+				<img width="32" width="32" src="/images/brands/github-icon.svg" alt="Github Profile" title="Github Profile"/>
+			</a>
+			<a href="https://twitter.com/apearsonio" target="_blank">
+				<img width="32" width="32" src="/images/brands/twitter.svg" alt="Twitter Profile" title="Twitter Profile"/>
+			</a>
+			<a href="https://linkedin.com/in/apearsonio" target="_blank">
+				<img width="32" width="32" src="/images/brands/linkedin-icon.svg" alt="LinkedIn Profile" title="LinkedIn Profile"/>
+			</a>
+		</div>
+	</nav>
+
+	<!-- Content Card -->
+	<main class="paper paper-1">
+		<%- body %>
+	</main>
+
+	<!-- Blog Card -->
+	<aside class="paper paper-1">
+		<h2>Updates & Projects</h2>
+
+		<ul>
+			<% for(let i = site.posts.data.length - 1; i >= 0; i--){%>
+				<li>
+					<a href="<%= url_for(site.posts.data[i].path) %>">
+						<%- site.posts.data[i].title %>
+					</a>
+				</li>
+			<% } %>
+		</ul>
+
+		<a href="/archives">All Updates & Projects</a>
+	</aside>
+
+	<!-- Copyright Row -->
+	<footer>© 2018 John Andrew Tyler Pearson</footer>
+</body>
+</html>

@@ -1,5 +1,6 @@
 /* Corrections */
 a{
+	color: #369;
 	text-decoration: none;
 }
 h2{
@@ -12,6 +13,9 @@ h4{
 }
 p{
 	margin: 0px;
+}
+hr{
+	margin: 0px 0px 20px 0px;
 }
 
 /* Body */
@@ -34,6 +38,7 @@ body{
 	grid-row-gap: 10px;
 	grid-template-areas:
 			"nav"
+			"aside"
 			"main"
 			"footer";
 
@@ -110,6 +115,32 @@ nav > #links{
 	align-items: flex-end;
 }
 
+/* Blog Aside */
+aside{
+	/* Resetting styles */
+	text-align: initial;
+
+	/* Grid Metadata */
+	grid-area: aside;
+}
+aside > h2{
+	/* Centering Header */
+	text-align: center;
+}
+aside > a{
+	/* Centering Footer */
+	display: block;
+	text-align: center;
+	padding: 10px 0px;
+}
+aside ul{
+	font-size: 95%;
+}
+aside li{
+	/* Padding from each item */
+	padding: 2px 0px;
+}
+
 /* Content */
 main{
 	/* Grid Metadata */
@@ -122,6 +153,19 @@ main{
 	/* Grid shink fix */
 	min-width: 0;
 }
+
+/* Post */
+main > article > header{
+	/* Title and Date side by side */
+	display: flex;
+
+	/* Aligning items together */
+	align-items: baseline;
+
+	/* Putting all space between title and date */
+	justify-content: space-between;
+}
+
 main .project{
 	margin-bottom: 15px;
 }
@@ -176,8 +220,9 @@ footer{
 		grid-template-columns: 2fr 7fr;
 		grid-column-gap: 10px;
 		grid-template-areas:
-			"nav main"
-			".   main"
+			"nav    main"
+			"aside  main"
+			".      main"
 			"footer footer"
 	}
 	body.alert{
@@ -191,14 +236,21 @@ footer{
 	}
 
 	nav{
-		/* Max Width */
-		max-width: 245px;
-
 		/* Sticky Positioning */
 		position: -webkit-sticky;
 		position: sticky;
 
 		/* Position (margin + padding) */
 		top: 50px;
+	}
+
+	aside{
+		/* Sticky Positioning */
+		position: -webkit-sticky;
+		position: sticky;
+
+		/* Position (margin + padding + nav) */
+		/* NOTE: This will only work for screens greater than 768px tall */
+		top: 505px;
 	}
 }
