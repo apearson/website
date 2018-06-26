@@ -1,0 +1,7 @@
+## Cache Control
+/css/*
+	cache-control: public, max-age=86400
+/images/*
+	cache-control: public, max-age=86400
+/dist/*
+	cache-control: public, max-age=86400
