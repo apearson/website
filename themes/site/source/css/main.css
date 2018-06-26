@@ -17,6 +17,9 @@ p{
 hr{
 	margin: 0px 0px 20px 0px;
 }
+ul{
+	padding-left: 20px;
+}
 
 /* Body */
 body{
@@ -122,6 +125,10 @@ aside{
 
 	/* Grid Metadata */
 	grid-area: aside;
+
+	/* Layout */
+	position: initial;
+	padding: 5px 15px;
 }
 aside > h2{
 	/* Centering Header */
@@ -236,6 +243,10 @@ footer{
 	}
 
 	nav{
+		/* Sizing */
+		height: 430px;
+		width: 235px;
+
 		/* Sticky Positioning */
 		position: -webkit-sticky;
 		position: sticky;
@@ -245,6 +256,9 @@ footer{
 	}
 
 	aside{
+		/* Sizing */
+		width: 235px;
+
 		/* Sticky Positioning */
 		position: relative;
 		position: -webkit-sticky;
