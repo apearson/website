@@ -246,11 +246,12 @@ footer{
 
 	aside{
 		/* Sticky Positioning */
+		position: relative;
 		position: -webkit-sticky;
 		position: sticky;
 
 		/* Position (margin + padding + nav) */
 		/* NOTE: This will only work for screens greater than 768px tall */
-		top: 506px;
+		top: 501px;
 	}
 }
