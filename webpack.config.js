@@ -1,8 +1,12 @@
 /* Libraries */
 const path = require('path');
+const merge = require('webpack-merge');
 
-/* Webpack config */
-module.exports = {
+/* Plugins */
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
+/* Webpack configs */
+const baseConfig = {
 	/* Entry */
 	entry: './src/main.ts',
 
@@ -29,3 +33,36 @@ module.exports = {
 		publicPath: '/dist/'
 	}
 };
+const devConfig = {
+	/* Changing mode to production */
+	mode: 'development',
+
+	/* Source Maps */
+	devtool: 'cheap-source-map',
+
+	/* Development */
+	devServer: {
+		contentBase: path.resolve('public'),
+		watchContentBase: true,
+		host: '0.0.0.0',
+		open: true,
+	},
+}
+const prodConfig = {
+	/* Changing mode to production */
+	mode: 'production',
+
+	/* Source Maps */
+	devtool: 'source-map',
+
+	/* Turning off warnings */
+	performance: { hints: false },
+
+	/* Plugins */
+	plugins: [
+		new UglifyJsPlugin({sourceMap: true})
+	],
+}
+
+/* Determine which is needed */
+module.exports = env => env === 'production'? merge(baseConfig, prodConfig) : merge(baseConfig, devConfig);

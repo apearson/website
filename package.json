@@ -6,10 +6,10 @@
 		"gen": "hexo generate -w",
 
 		"build": "hexo generate & yarn run build:scripts",
-		"build:scripts": "webpack --config webpack.prod.js",
+		"build:scripts": "webpack --config webpack.config.js --env=production",
 		"rebuild": "yarn run clean && yarn run build",
 
-		"debug": "yarn run gen & webpack-dev-server --config webpack.dev.js --progress --color",
+		"debug": "yarn run gen & webpack-dev-server --config webpack.config.js --progress --color",
 
 		"clean": "hexo clean"
 	},
