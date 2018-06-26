@@ -1,1 +1,1 @@
-Copyright 2015 John Andrew Tyler Pearson
+© 2018 John Andrew Tyler Pearson
