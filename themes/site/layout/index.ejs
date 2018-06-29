@@ -1,1 +1,25 @@
-<%- site.pages.data[0].content -%>
+<!-- Post Header -->
+<header>
+	<h1>Posts & Updates</h1>
+</header>
+<hr/>
+
+<section>
+	<% for(let i = site.posts.data.length - 1; i >= 0; i--){%>
+		<!-- Post -->
+		<article>
+			<!-- Post Header -->
+			<header>
+				<h1><a href="/<%= site.posts.data[i].path	%>"><%= site.posts.data[i].title -%></a></h1>
+
+				<time datetime="<%= site.posts.data[i].date.format("YYYY-MM-DD") %>" pubdate="pubdate">
+					<%= site.posts.data[i].date.format("dddd, MMMM Do YYYY") %>
+				</time>
+			</header>
+			<hr/>
+
+			<!-- Post Content -->
+			<%- site.posts.data[i].content %>
+		</article>
+	<% } %>
+</section>

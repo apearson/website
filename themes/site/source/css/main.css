@@ -3,13 +3,15 @@ a{
 	color: #369;
 	text-decoration: none;
 }
+h1, h2, h3, h4, h5, h6{
+	font-weight: normal;
+	margin-bottom: 5px;
+}
+h1{
+	font-size: 130%;
+}
 h2{
 	font-size: 120%;
-	font-weight: normal;
-}
-h4{
-	margin-bottom: 5px;
-	margin-top: 5px;
 }
 p{
 	margin: 0px;
@@ -164,7 +166,10 @@ main{
 }
 
 /* Post */
-main > article > header{
+main article{
+	margin-bottom: 50px;
+}
+main article > header{
 	/* Title and Date side by side */
 	display: flex;
 
@@ -173,6 +178,9 @@ main > article > header{
 
 	/* Putting all space between title and date */
 	justify-content: space-between;
+}
+main > section > article > header > h1{
+	font-size: 120%;
 }
 
 main .project{

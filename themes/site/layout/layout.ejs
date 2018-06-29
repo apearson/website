@@ -37,10 +37,13 @@
 
 	<!-- Title -->
 	<title>
+		aPearson
 		<% if(page.title){ %>
-			aPearson | <%- page.title %>
-		<% } else { %>
-			John Andrew Tyler Pearson
+			| <%- page.title %>
+		<% } else if(page.archive){ %>
+			| Archives
+		<% } else{ %>
+			| Blog
 		<% } %>
 	</title>
 </head>
@@ -82,7 +85,7 @@
 
 	<!-- Blog Card -->
 	<aside class="paper">
-		<h2>Updates & Projects</h2>
+		<h2><a href="<%= config.index_generator.path %>">Updates & Projects</a></h2>
 
 		<ul>
 			<% for(let i = site.posts.data.length - 1; i >= 0; i--){%>
