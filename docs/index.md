@@ -17,7 +17,7 @@ skip_render: true
 	<dt><h2>What do I do?</h2></dt>
 	<dd>
 		<div class="project">
-			<a href="https://github.com/apearson/southern-company-api" target="_blank"><h4>Southern Company API</h4></a>
+			<h4><a href="https://github.com/apearson/southern-company-api" target="_blank">Southern Company API</a></h4>
 			A Node.js Library to access utility data from Southern Company power utilities (Alabama Power, Georgia Power, Gulf Power, Mississippi Power)
 		</div>
 
