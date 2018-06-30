@@ -196,6 +196,7 @@ body.alert > header{
 }
 body.alert > main{
 	text-align: center;
+	line-height: 1;
 }
 
 /* Footer and Copyright */
