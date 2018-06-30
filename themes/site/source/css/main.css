@@ -13,9 +13,6 @@ h1{
 h2{
 	font-size: 120%;
 }
-p{
-	margin: 0px;
-}
 hr{
 	margin: 0px 0px 20px 0px;
 }
@@ -73,11 +70,15 @@ nav{
 	justify-content: space-between;
 	padding: 5px 15px;
 }
+nav p{
+	margin: 0px;
+}
 
 /* Profile Photo */
 nav > #photo{
 	width: 230px;
 	border-radius: 5px;
+	align-self: center;
 }
 
 /* Profile Name */
@@ -118,7 +119,7 @@ nav > #links{
 	display: flex;
 
 	/* Internal layout */
-	justify-content: space-evenly;
+	justify-content: space-between;
 	align-items: flex-end;
 }
 
