@@ -4,13 +4,14 @@
 	"private": true,
 	"scripts": {
 		"gen": "hexo generate -w",
+		"serve": "webpack-dev-server --config webpack.config.js --progress --color",
 
-		"build": "hexo generate && npm run build:cdn & npm run build:scripts",
+		"build": "npm run build:cdn & npm run build:scripts && hexo generate",
 		"build:scripts": "webpack --config webpack.config.js --env=production",
 		"build:cdn": "cp ./netlify/* ./public/",
 		"rebuild": "npm run clean && npm run build",
 
-		"debug": "npm run gen & webpack-dev-server --config webpack.config.js --progress --color",
+		"debug": "npm run serve & npm run gen",
 
 		"clean": "rm -r public db.json"
 	},
