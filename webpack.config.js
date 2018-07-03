@@ -45,7 +45,6 @@ const devConfig = {
 		contentBase: path.resolve('public'),
 		watchContentBase: true,
 		host: '0.0.0.0',
-		open: true,
 	},
 }
 const prodConfig = {
