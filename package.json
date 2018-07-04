@@ -5,14 +5,11 @@
 	"scripts": {
 		"gen": "hexo generate -w",
 		"serve": "webpack-dev-server --config webpack.config.js --progress --color",
-
 		"build": "npm run build:cdn & npm run build:scripts && hexo generate",
 		"build:scripts": "webpack --config webpack.config.js --env=production",
-		"build:cdn": "cp ./netlify/* ./public/",
+		"build:cdn": "mkdir ./public/ && cp ./netlify/* ./public/",
 		"rebuild": "npm run clean && npm run build",
-
 		"debug": "npm run serve & npm run gen",
-
 		"clean": "rm -r public db.json"
 	},
 	"hexo": {
@@ -26,7 +23,9 @@
 		"hexo": "^3.2.0",
 		"hexo-generator-archive": "^0.1.4",
 		"hexo-generator-category": "^0.1.3",
+		"hexo-generator-feed": "^1.2.2",
 		"hexo-generator-index": "^0.2.0",
+		"hexo-generator-sitemap": "^1.2.0",
 		"hexo-generator-tag": "^0.2.0",
 		"hexo-renderer-ejs": "^0.3.0",
 		"hexo-renderer-marked": "^0.3.0",

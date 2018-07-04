@@ -12,7 +12,7 @@ language:
 timezone:
 
 # URL
-url: https://apearson.io
+url: https://www.apearson.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -82,7 +82,19 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: site
 
+sitemap:
+  path: sitemap.xml
+
+feed:
+  type: atom
+  limit: false
+  hub:
+  content: true
+  content_limit: 140
+  content_limit_delim: ' '
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
+
