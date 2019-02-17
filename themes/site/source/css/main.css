@@ -264,3 +264,14 @@ footer{
 		top: 501px;
 	}
 }
+
+@media(prefers-color-scheme: dark){
+	a{
+		color: #8BE;
+	}
+
+	.paper {
+		color: #ddd;
+		background-color: #222;
+	}
+}
