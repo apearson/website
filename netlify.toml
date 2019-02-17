@@ -8,16 +8,18 @@
 	# Where to run functions from
 	functions = "dist/functions/"
 
-[[headers]]
 	# Cache Control #
+[[headers]]
 	for = "/css/*"
 	[headers.values]
 		Cache-Control = "public, max-age=86400"
 
+[[headers]]
 	for = "/images/*"
 	[headers.values]
 		Cache-Control = "public, max-age=86400"
 
+[[headers]]
 	[headers.values]
 	for = "/dist/*"
 		Cache-Control = "public, max-age=86400"
