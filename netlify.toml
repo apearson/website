@@ -11,8 +11,13 @@
 [[headers]]
 	# Cache Control #
 	for = "/css/*"
-		cache-control: public, max-age=86400
+	[headers.values]
+		Cache-Control = "public, max-age=86400"
+
 	for = "/images/*"
-		cache-control: public, max-age=86400
+	[headers.values]
+		Cache-Control = "public, max-age=86400"
+
+	[headers.values]
 	for = "/dist/*"
-		cache-control: public, max-age=86400
+		Cache-Control = "public, max-age=86400"
