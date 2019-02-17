@@ -1,0 +1,18 @@
+[build]
+	# Where to serve site from
+	publish = "public"
+
+	# How to build site
+	command = "yarn run build"
+
+	# Where to run functions from
+	functions = "dist/functions/"
+
+[[headers]]
+	# Cache Control #
+	/css/*
+		cache-control: public, max-age=86400
+	/images/*
+		cache-control: public, max-age=86400
+	/dist/*
+		cache-control: public, max-age=86400
