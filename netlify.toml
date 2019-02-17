@@ -20,6 +20,6 @@
 		Cache-Control = "public, max-age=86400"
 
 [[headers]]
-	[headers.values]
 	for = "/dist/*"
+	[headers.values]
 		Cache-Control = "public, max-age=86400"
