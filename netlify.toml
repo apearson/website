@@ -10,9 +10,9 @@
 
 [[headers]]
 	# Cache Control #
-	/css/*
+	for = "/css/*"
 		cache-control: public, max-age=86400
-	/images/*
+	for = "/images/*"
 		cache-control: public, max-age=86400
-	/dist/*
+	for = "/dist/*"
 		cache-control: public, max-age=86400
