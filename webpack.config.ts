@@ -4,7 +4,12 @@ import * as path from 'path';
 /* Webpack configs */
 const baseConfig = {
 	/* Entry */
-	entry: './src/main.ts',
+	// entry: './src/main.ts',
+
+	entry: {
+		'public/dist/bundle': path.resolve(__dirname, 'src', 'main.ts'),
+		'dist/utility-data': path.resolve(__dirname, 'src', 'functions', 'utility-data.ts')
+	},
 
 	/* File resolution */
 	resolve: {
@@ -23,11 +28,16 @@ const baseConfig = {
 	},
 
 	/* Output */
+	// output: {
+	// 	filename: 'bundle.js',
+	// 	path: path.resolve('public', 'dist'),
+	// 	publicPath: '/dist/'
+	// }
 	output: {
-		filename: 'bundle.js',
-		path: path.resolve('public', 'dist'),
-		publicPath: '/dist/'
-	}
+		path: path.resolve('.'),
+		filename: '[name].js',
+		publicPath: '/dist/',
+	},
 };
 
 /* Webpack config export */

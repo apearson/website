@@ -7,6 +7,11 @@
   resolved "https://registry.yarnpkg.com/@types/anymatch/-/anymatch-1.3.1.tgz#336badc1beecb9dacc38bea2cf32adf627a8421a"
   integrity sha512-/+CRPXpBDpo2RK9C68N3b2cOvO0Cf5B9aPijHsoDQTHivnGSObdOF2BRQOYjojWTDy6nQvMjmqRXIxH55VjxxA==
 
+"@types/aws-lambda@^8.10.19":
+  version "8.10.19"
+  resolved "https://registry.yarnpkg.com/@types/aws-lambda/-/aws-lambda-8.10.19.tgz#913a8016a4599d262960d97cb11faf7e963ec0e1"
+  integrity sha512-dEhQow/1awGGIf/unEpb97vsTtnQ3qRPAhSmZZcXKzs4nOVbIuWo5LCCzOYdSIkGkkoFXVvc8pBaSVKRYIFUBA==
+
 "@types/body-parser@*":
   version "1.17.0"
   resolved "https://registry.yarnpkg.com/@types/body-parser/-/body-parser-1.17.0.tgz#9f5c9d9bd04bb54be32d5eb9fc0d8c974e6cf58c"
@@ -2141,26 +2146,11 @@ hexo-generator-category@^0.1.3:
     hexo-pagination "0.0.2"
     object-assign "^2.0.0"
 
-hexo-generator-feed@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/hexo-generator-feed/-/hexo-generator-feed-1.2.2.tgz#9516d1596509b157f4d044fb49b2bae398b82ba7"
-  dependencies:
-    nunjucks "^3.0.0"
-    object-assign "^4.1.1"
-
 hexo-generator-index@^0.2.0:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/hexo-generator-index/-/hexo-generator-index-0.2.1.tgz#9042229fcac79aaf700575da19332bf3f7ee5c5d"
   dependencies:
     hexo-pagination "0.0.2"
-    object-assign "^4.0.1"
-
-hexo-generator-sitemap@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/hexo-generator-sitemap/-/hexo-generator-sitemap-1.2.0.tgz#3018f8d7d1e2e42b3f71a65a7316ffcf583bc3f3"
-  dependencies:
-    minimatch "^3.0.0"
-    nunjucks "^2.3.0"
     object-assign "^4.0.1"
 
 hexo-generator-tag@^0.2.0:
@@ -3306,25 +3296,6 @@ nth-check@~1.0.1:
 number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
-
-nunjucks@^2.3.0:
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/nunjucks/-/nunjucks-2.5.2.tgz#ea7d346e785b8a4874666c3cca9e18c577fba22c"
-  dependencies:
-    asap "^2.0.3"
-    chokidar "^1.6.0"
-    yargs "^3.32.0"
-
-nunjucks@^3.0.0:
-  version "3.1.3"
-  resolved "https://registry.yarnpkg.com/nunjucks/-/nunjucks-3.1.3.tgz#9a23c844af01c143a0b40f3bdd1212a9d7877260"
-  dependencies:
-    a-sync-waterfall "^1.0.0"
-    asap "^2.0.3"
-    postinstall-build "^5.0.1"
-    yargs "^3.32.0"
-  optionalDependencies:
-    chokidar "^2.0.0"
 
 nunjucks@^3.1.2:
   version "3.1.2"
