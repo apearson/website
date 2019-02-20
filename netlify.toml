@@ -6,9 +6,9 @@
 	command = "yarn run build"
 
 	# Where to run functions from
-	functions = "src/functions"
+	# functions = "src/functions"
 
-	# Cache Control #
+# Cache Control #
 [[headers]]
 	for = "/css/*"
 	[headers.values]
