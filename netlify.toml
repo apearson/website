@@ -6,7 +6,7 @@
 	command = "yarn run build"
 
 	# Where to run functions from
-	# functions = "src/functions"
+	functions = "dist2"
 
 # Cache Control #
 [[headers]]
