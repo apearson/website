@@ -44,4 +44,4 @@ skip_render: true
 </dl>
 
 <!-- Scripts -->
-<script async src="/dist/bundle.js"></script>
+<script async src="/dist/main.js"></script>

@@ -1,10 +1,32 @@
 /* Libraries */
-import { APIGatewayProxyEvent, Handler } from "aws-lambda";
+import { APIGatewayProxyEvent, Context, APIGatewayProxyCallback} from 'aws-lambda';
+import fetch from 'node-fetch';
+
+/* Env Settings */
+const { dataURL } = process.env;
 
 /* Handler function */
-const handler: Handler<APIGatewayProxyEvent, 'Hello'> = function(event, context, callback){
-	callback(null, "Hello");
-};
+exports.handler = async function(event: APIGatewayProxyEvent, context: Context, callback: APIGatewayProxyCallback){
 
-/* Exporting handler */
-export { handler };
+	// Try to grab data from dataservice and proxy it
+	try{
+		// Grabbing data from data service
+		const res = await fetch(dataURL);
+
+		console.log(dataURL);
+
+		const body = await res.text();
+
+		// Returning data
+		return {
+			statusCode: 200,
+			body,
+		};
+	}
+	catch(e){
+		return {
+			statusCode: 500,
+			body: "An error has occured while getting data"
+		}
+	}
+}

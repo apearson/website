@@ -3,12 +3,14 @@
 
 # Node #
 node_modules
+.cache
 
 # Public Build */
 public
 
 # Dist Stuff #
 dist
+functions
 
 # Hexo Stuff #
 db.json
