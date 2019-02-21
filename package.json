@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "yarn run build:scripts && yarn run build:functions && hexo generate",
-    "build:scripts": "parcel build src/scripts/*.ts --out-dir public/dist/",
-    "build:functions": "tsc -t ES2017 -m CommonJS --outDir ./dist ./src/functions/*.ts",
-    "clean": "rm -rf public dist .cache db.json",
     "debug": "yarn run serve & yarn run gen & yarn run serve:functions",
-    "gen": "hexo generate -w",
+    "build": "yarn run build:scripts && yarn run build:functions && hexo generate",
     "rebuild": "yarn run clean && yarn run build",
-    "serve:functions": "netlify-lambda serve dist"
+    "clean": "rm -rf public dist .cache db.json",
+    "gen": "hexo generate -w",
+    "build:scripts": "parcel build src/scripts/*.ts --out-dir public/dist/",
+    "build:functions": "netlify-lambda build src/functions",
+    "serve:functions": "netlify-lambda serve src/functions"
   },
   "hexo": {
     "version": "3.8.0"
