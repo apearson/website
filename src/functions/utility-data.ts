@@ -12,9 +12,6 @@ exports.handler = async function(event: APIGatewayProxyEvent, context: Context, 
 	try{
 		// Grabbing data from data service
 		const res = await fetch(dataURL);
-
-		console.log(dataURL);
-
 		const body = await res.text();
 
 		// Returning data
