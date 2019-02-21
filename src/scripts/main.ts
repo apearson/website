@@ -17,7 +17,7 @@ class App{
 	}
 
 	async grabMonthlyData(): Promise<MonthlyData[]>{
-		const res = await fetch('https://home.apearson.io/api/utility/monthly?limit=12', {
+		const res = await fetch('/.netlify/functions/utility-data', {
 			method: 'GET'
 
 		});
