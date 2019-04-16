@@ -17,7 +17,7 @@ class App{
 	}
 
 	async grabMonthlyData(): Promise<MonthlyData[]>{
-		const res = await fetch('/.netlify/functions/utility-data', {
+		const res = await fetch('/api/utility', {
 			method: 'GET'
 
 		});
