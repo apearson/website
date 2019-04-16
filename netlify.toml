@@ -7,6 +7,12 @@
 
 	# Where to run functions from
 	functions = "dist"
+	
+[[redirect]]
+  from = "/api/utility"
+  to = "/.netlify/functions/utility-data"
+  status = 200
+  
 
 # Cache Control #
 [[headers]]
