@@ -20,7 +20,6 @@ skip_render: true
 			<h4><a href="https://github.com/apearson/southern-company-api" target="_blank">Southern Company API</a></h4>
 			A Node.js Library to access utility data from Southern Company power utilities (Alabama Power, Georgia Power, Gulf Power, Mississippi Power)
 		</div>
-
 		<div class="project">
 			<a href="https://github.com/apearson/insteon-plm" target="_blank"><h4>Insteon PLM JS</h4></a>
 			A Node.js Library to communicate with Insteon's PowerLinc Modem. The goal of the project is to give developers an easy interface to control smart devices using the Insteon protocol.
