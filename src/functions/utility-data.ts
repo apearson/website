@@ -21,6 +21,7 @@ exports.handler = async function(event: APIGatewayProxyEvent, context: Context, 
 		};
 	}
 	catch(e){
+		console.error('A data error has happened:', e);
 		return {
 			statusCode: 500,
 			body: "An error has occured while getting data"
