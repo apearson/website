@@ -1,5 +1,9 @@
 /* Libraries */
-import { Chart, ChartPoint } from 'chart.js';
+import { Chart, TimeScale, LineController, LineElement, PointElement, LinearScale, Title } from 'chart.js';
+Chart.register(LineController, LineElement, PointElement, LinearScale, Title);
+import 'chartjs-adapter-date-fns';
+
+Chart.register(TimeScale);
 
 /* Interfaces */
 interface MonthlyData {
@@ -29,7 +33,7 @@ class App {
 	async initChart() {
 		const data = await this.grabMonthlyData();
 
-		const chartData: ChartPoint[] = data.map((month) => ({ x: new Date(month.date), y: month.kWh }));
+		const chartData = data.map((month) => ({ x: new Date(month.date), y: month.kWh }));
 
 		const chartCanvas = document.getElementsByTagName('canvas')[0];
 		const context = chartCanvas.getContext('2d');
@@ -51,16 +55,16 @@ class App {
 			},
 			options: {
 				scales: {
-					xAxes: [
-						{
-							type: 'time',
-							time: {
-								displayFormats: {
-									month: 'MMM YYYY'
-								}
+					xAxes:
+					{
+						type: 'time',
+						time: {
+							displayFormats: {
+								month: 'MMM YYYY'
 							}
 						}
-					]
+					}
+
 				}
 			}
 		});
