@@ -1,8 +1,8 @@
 /* Libraries */
-import {Chart, ChartPoint} from 'chart.js';
+import { Chart, ChartPoint } from 'chart.js';
 
 /* Interfaces */
-interface MonthlyData{
+interface MonthlyData {
 	bill: number;
 	cost: number;
 	date: string;
@@ -10,14 +10,14 @@ interface MonthlyData{
 }
 
 /* Main app class */
-class App{
-	constructor(){
+class App {
+	constructor() {
 		/* Initializing chart */
 		this.initChart();
 	}
 
-	async grabMonthlyData(): Promise<MonthlyData[]>{
-		const res = await fetch('/api/utility', {
+	async grabMonthlyData(): Promise<MonthlyData[]> {
+		const res = await fetch('/api/utility.json', {
 			method: 'GET'
 
 		});
@@ -26,10 +26,10 @@ class App{
 		return data;
 	}
 
-	async initChart(){
+	async initChart() {
 		const data = await this.grabMonthlyData();
 
-		const chartData: ChartPoint[] = data.map((month)=> ({x: new Date(month.date), y: month.kWh}));
+		const chartData: ChartPoint[] = data.map((month) => ({ x: new Date(month.date), y: month.kWh }));
 
 		const chartCanvas = document.getElementsByTagName('canvas')[0];
 		const context = chartCanvas.getContext('2d');
@@ -50,11 +50,11 @@ class App{
 				]
 			},
 			options: {
-				scales:{
-					xAxes:[
+				scales: {
+					xAxes: [
 						{
 							type: 'time',
-							time:{
+							time: {
 								displayFormats: {
 									month: 'MMM YYYY'
 								}
