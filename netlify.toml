@@ -3,16 +3,7 @@
 	publish = "public"
 
 	# How to build site
-	command = "yarn run build"
-
-	# Where to run functions from
-	functions = "dist"
-
-[[redirects]]
-  from = "/api/utility"
-  to = "/.netlify/functions/utility-data"
-  status = 200
-
+	command = "npm run build"
 
 # Cache Control #
 [[headers]]
