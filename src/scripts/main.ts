@@ -21,7 +21,7 @@ class App {
 	}
 
 	async grabMonthlyData(): Promise<MonthlyData[]> {
-		const res = await fetch('/api/utility.json', {
+		const res = await fetch('https://gist.githubusercontent.com/apearson/bdb841a654e9a0715e4180b208611a0f/raw/home-utility.json', {
 			method: 'GET'
 
 		});
