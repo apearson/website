@@ -60,7 +60,7 @@ class App {
 						type: 'time',
 						time: {
 							displayFormats: {
-								month: 'MMM YYYY'
+								month: 'MMM yyyy'
 							}
 						}
 					}
