@@ -13,10 +13,3 @@
 	for = "/dist/*"
 	[headers.values]
 		Cache-Control = "public, max-age=86400"
-
-[[redirects]]
-  from = "/mykhoury-api/*"
-  to = "https://api.mykhoury.net/:splat"
-  status = 200
-  force = true
-  headers = {X-From = "Netlify"}
