@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: aPearson
+title: Andrew Pearson
 subtitle: A place to put my thoughts to rediscover later
 description:
 keywords:
@@ -12,7 +12,7 @@ language:
 timezone:
 
 # URL
-url: https://www.apearson.io
+url: https://www.jatpearson.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
