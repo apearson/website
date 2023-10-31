@@ -1,8 +1,9 @@
 /* Libraries */
-import { Chart, TimeScale, LineController, LineElement, PointElement, LinearScale, Title } from 'chart.js';
+import { Chart, TimeScale, LineController, LineElement, PointElement, LinearScale, Title, CategoryScale } from 'chart.js';
 Chart.register(LineController, LineElement, PointElement, LinearScale, Title);
 import 'chartjs-adapter-date-fns';
 
+Chart.register(CategoryScale);
 Chart.register(TimeScale);
 
 /* Interfaces */
