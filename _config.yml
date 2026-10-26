@@ -25,7 +25,12 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
+# Copy source/_headers into public/ unchanged. Hexo ignores names that
+# start with "_" unless they are listed in include.
 skip_render:
+  - "_headers"
+include:
+  - "_headers"
 
 # Writing
 new_post_name: :title.md # File name of new posts
